@@ -17,4 +17,7 @@ data.prepare_training_data()     # Preparing Data for the purpose of training.
 
 model = Model(data, settings)
 model.train()
+print('Press any button to stop.')
+
+
 
