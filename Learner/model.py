@@ -16,7 +16,6 @@ class Model():
         self.w1 = np.random.uniform(-1, 1, (self.data.words_num, self.settings.hid_lay_nodes))
         self.w2 = np.random.uniform(-1, 1, (self.settings.hid_lay_nodes, self.data.words_num))
 
-        loss = []
         # Training through the entire dataset epoch number of times.
         for i in range(self.settings.epoch):
             avg_loss = 0
@@ -35,9 +34,7 @@ class Model():
                 self.find_loss(y_out, context)
                 avg_loss += self.loss
 
-            loss.append(avg_loss / self.data.m)
-
-        self.plot(loss)
+            self.plot(i, avg_loss)
 
     def forward_prop(self, x):
 
@@ -78,28 +75,14 @@ class Model():
 
         style.use('dark_background')
         plt.figure()
-        plt.ion()
         plt.xlabel('Number of iterations')
         plt.ylabel('Loss')
 
-    def plot(self, loss):
+    def plot(self, i, avg_loss):
 
-        x = range(1, self.settings.epoch + 1)
-        plt.plot(x, loss)
-        plt.show(block = True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        avg_loss = avg_loss / self.data.m
+        plt.scatter(i, avg_loss, color = 'red', s = 3)
+        plt.show(block = False)
+        plt.pause(0.001)
 
 
