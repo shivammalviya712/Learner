@@ -20,5 +20,5 @@ The cost vs iteration curve of our model
 ![](GloVe/images/Cost%20vs%20Iteration.png)
 
 # Reference
-- Word2vec: https://arxiv.org/abs/1301.3781
+- Word2vec: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
 - Glove: https://nlp.stanford.edu/pubs/glove.pdf
