@@ -11,13 +11,17 @@ There are two approaches to implement word2vec:
 In this project Word2vec is implemented by skip-gram approach.
 
 The cost vs iteration curve of our model
-![](Word2vec/images/Cost%20vs%20Iteration.png)
+<p align='center'>
+  <img src = 'Word2vec/images/Cost%20vs%20Iteration.png'>
+</p>
 
 # GloVe
 GloVe stands for "global vectors". It condenses the whole corpus in to co-occurence matrix and train on that. 
 
 The cost vs iteration curve of our model
-![](GloVe/images/Cost%20vs%20Iteration.png)
+<p align='center'>
+  <img src='GloVe/images/Cost%20vs%20Iteration.png'>
+</p>
 
 # Reference
 - Word2vec: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
